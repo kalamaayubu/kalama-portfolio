@@ -73,13 +73,13 @@ const NavBar = () => {
           >
             {/* Icon */}
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.label}</span>
+            <span className="hidden sm:block">{navItem.label}</span>
 
             {/* Tooltip only for small screens */}
             <span
               className="
                 absolute bottom-6 left-1/2 -translate-x-1/2 mb-2
-                px-2 py-1 bg-[#0c0c11] text-white text-sm border border-white/10 rounded-full font-medium
+                px-2 py-1 bg-[#0c0c11] text-gray-300 border border-white/10 rounded-full font-medium
                 opacity-0 pointer-events-none
                 group-hover:opacity-100 transition-opacity duration-300
                 sm:hidden z-50
@@ -93,7 +93,7 @@ const NavBar = () => {
         <button
           className="
             border border-white/20
-            px-4 py-2 rounded-full text-sm font-medium
+            px-4 py-2 rounded-full font-medium
             text-white relative
             hover:bg-white/10 transition
             cursor-pointer
@@ -103,9 +103,12 @@ const NavBar = () => {
           <span
             className="
             absolute inset-x-0 w-1/2 mx-auto -bottom-px 
-            bg-linear-to-r from-transparent via-blue-500 to-transparent 
             h-px
           "
+            style={{
+              background:
+                "linear-gradient(to right, transparent, #3b82f6, #8b5cf6, transparent)",
+            }}
           />
         </button>
       </motion.div>
