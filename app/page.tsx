@@ -6,9 +6,9 @@ import { ArrowRight } from "lucide-react";
 
 const RootPage = () => {
   return (
-    <main className="px-4 sm:px-6 md:px-12 sm:pl-16 lg:pl-24">
+    <main className="">
       <NavBar />
-      <section className="flex flex-col lg:flex-row mt-40 mb-20  gap-12 lg:items-center">
+      <section className="section-padding flex flex-col lg:flex-row mt-40 mb-20  gap-12 lg:items-center">
         <div className="max-w-[800px]">
           <h1 className="mx-auto text-5xl font-bold">
             Hello! Am{" "}

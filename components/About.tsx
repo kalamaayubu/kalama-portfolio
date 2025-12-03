@@ -3,15 +3,16 @@
 import { LucideNetwork, ReplyAll, SoapDispenserDroplet } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { BackgroundBeams } from "./ui/background-beams";
 
 const About = () => {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <section className="mt-12">
+    <section className="w-full pt-10 pb-28 bg-white/5 section-padding rounded-md relative flex flex-col items-center justify-center">
       <div
         className="
-            border border-white/20
+            border border-white/20 mt-12
             px-3 py-1 rounded-full font-medium
             text-white relative w-fit mb-10 mx-auto
           "
@@ -28,14 +29,16 @@ const About = () => {
           }}
         />
       </div>
-      <div className="flex flex-col gap-8 lg:flex-row items-center">
+      <div className="flex z-50 flex-col gap-8 lg:flex-row items-center">
         <div
           className={`
-        p-6 bg-gray-800/10 lg:w-1/2 lg:bg-blue-900/20 relative rounded-full
-        flex flex-col items-center gap-6
-        lg:flex-row ${flipped ? "lg:flex-row-reverse lg:bg-purple-500/5" : ""} 
-        transition-all duration-500
-      `}
+              p-6 bg-gray-800/10 lg:w-1/2 lg:bg-blue-900/20 relative rounded-full
+              flex flex-col items-center gap-6
+              lg:flex-row ${
+                flipped ? "lg:flex-row-reverse lg:bg-purple-500/5" : ""
+              } 
+              transition-all duration-300
+            `}
         >
           {" "}
           {/* CLICKABLE IMAGE */}
@@ -77,6 +80,7 @@ const About = () => {
           est unde, aut ipsa suscipit eum esse deleniti voluptas repudianda.
         </p>
       </div>
+      <BackgroundBeams />
     </section>
   );
 };

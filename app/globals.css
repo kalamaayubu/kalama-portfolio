@@ -118,3 +118,6 @@
     @apply bg-background text-foreground;
   }
 }
+.section-padding {
+  @apply px-4 sm:px-6 md:px-12 sm:pl-16 lg:pl-24;
+}
