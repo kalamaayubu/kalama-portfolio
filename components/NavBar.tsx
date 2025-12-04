@@ -99,7 +99,9 @@ const NavBar = () => {
             cursor-pointer
           "
         >
-          <span>Get in touch</span>
+          <span className="text-sm sm:text-[15px] text-gray-200">
+            Get in touch
+          </span>
           <span
             className="
             absolute inset-x-0 w-1/2 mx-auto -bottom-px 

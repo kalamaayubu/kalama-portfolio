@@ -9,7 +9,7 @@ const About = () => {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <section className="w-full pt-10 pb-28 bg-white/5 section-padding rounded-md relative flex flex-col items-center justify-center">
+    <section className="w-full pt-10 pb-28 bg-white/5 section-padding relative flex flex-col items-center justify-center">
       <div
         className="
             border border-white/20 mt-12
@@ -70,7 +70,7 @@ const About = () => {
             </button>
           </div>
         </div>
-        <p className="text-gray-400 text-2xl lg:w-1/2">
+        <p className="text-gray-400 text-xl md:text-2xl lg:w-1/2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga impedit
           obcaecati, iste quisquam magni a quo nisi nesciunt sequi, laboriosam
           est unde, aut ipsa suscipit eum esse deleniti voluptas repudianda{" "}

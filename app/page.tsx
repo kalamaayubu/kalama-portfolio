@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
 import Services from "@/components/Services";
+import Technologies from "@/components/Technologies";
 import { ArrowRight } from "lucide-react";
 
 const RootPage = () => {
@@ -10,7 +11,7 @@ const RootPage = () => {
       <NavBar />
       <section className="section-padding flex flex-col lg:flex-row mt-40 mb-20  gap-12 lg:items-center">
         <div className="max-w-[800px]">
-          <h1 className="mx-auto text-5xl font-bold">
+          <h1 className="mx-auto text-3xl sm:text-4xl lg:text-5xl font-bold">
             Hello! Am{" "}
             <span className="bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               Johana Kalama
@@ -18,7 +19,7 @@ const RootPage = () => {
             ,{""}
             <br /> a professional web developer
           </h1>
-          <p className="mt-4 max-w-[600px] text-gray-400 text-2xl">
+          <p className="mt-4 max-w-[600px] text-gray-400 text-xl md:text-2xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
             impedit obcaecati, iste quisquam magni a quo nisi nesciunt sequi,
             laboriosam est unde, aut ipsa suscipit eum esse deleniti voluptas
@@ -38,6 +39,7 @@ const RootPage = () => {
       </section>
       <About />
       <Services />
+      <Technologies />
     </main>
   );
 };

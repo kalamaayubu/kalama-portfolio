@@ -29,7 +29,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="mt-20 section-padding flex flex-col">
+    <section className="mt-20 pb-12 section-padding flex flex-col">
       <div
         className="
             border border-white/20
@@ -63,10 +63,12 @@ const Services = () => {
               <div className="flex items-center justify-center w-12 h-12 rounded-full bg-linear-to-tr from-blue-500/20 to-purple-500/20 border border-white/20 mb-4">
                 {step.icon}
               </div>
-              <h3 className="text-2xl font-semibold text-white">
+              <h3 className="xl:text-2xl text-xl font-semibold text-white">
                 {step.title}
               </h3>
-              <p className="text-gray-300 text-lg mt-2">{step.description}</p>
+              <p className="text-gray-300 xl:text-lg mt-2">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
