@@ -5,6 +5,9 @@ import Heading from "./Heading";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import { Database, Music, Server } from "lucide-react";
+import TechnologiesCard from "./TechnologiesCard";
+
 const technologies = [
   { icon: "reactjs-min.jpeg" },
   { icon: "nextjs-min.jpeg" },
@@ -20,6 +23,18 @@ const technologies = [
   { icon: "tailwindcss-min.jpeg" },
   { icon: "supabase-min.jpeg" },
 ];
+
+const frontend = [
+  "React",
+  "Tailwind CSS",
+  "NextJs",
+  "Typescript",
+  "React Native",
+];
+
+const backend = ["Node.js", "REST-API", "Nest.js", "Postman", "Next.js"];
+
+const database = ["PostgreSQL", "Supabase", "MongoDB"];
 
 const ICON_SIZE = 64; // 16x16 Tailwind size = 64px
 
@@ -107,39 +122,66 @@ const Technologies = () => {
 
   return (
     <section className="py-16">
-      <Heading title="Technologies" />
-
       <div className="flex items-center justify-center mt-10">
-        <div
-          ref={containerRef}
-          className="
+        <div className="relative bg-white/5 min-h-screen w-full py-16">
+          <Heading title="Technologies" className="bg-[#0c0c11]" />
+
+          <div className="flex w-full flex-col items-center justify-center mt-10">
+            <div
+              ref={containerRef}
+              className="
             relative 
             flex items-center justify-center 
             rounded-full 
             overflow-hidden 
             w-[90vw] z-50
             max-w-[550px] 
-            bg-[#0c0c11]
+            bg-transparent
             aspect-square
           "
-        >
-          {technologies.map((tech, i) => (
-            <motion.div
-              key={i}
-              ref={(el) => (iconRefs.current[i] = el)}
-              className="absolute w-8 sm:w-10 h-8 sm:h-10 md:w-12 md:h-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 bg-gray-700 rounded-full will-change-transform"
             >
-              <Image
-                src={`/assets/${tech.icon}`}
-                width={200}
-                height={200}
-                alt="tech"
-                className="object-contain w-full h-full rounded-full"
-              />
-            </motion.div>
-          ))}
+              {technologies.map((tech, i) => (
+                <motion.div
+                  key={i}
+                  ref={(el) => (iconRefs.current[i] = el)}
+                  className="absolute w-8 sm:w-10 h-8 sm:h-10 md:w-12 md:h-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 bg-gray-700 rounded-full will-change-transform"
+                >
+                  <Image
+                    src={`/assets/${tech.icon}`}
+                    width={200}
+                    height={200}
+                    alt="tech"
+                    className="object-contain w-full h-full rounded-full"
+                  />
+                </motion.div>
+              ))}
+            </div>
+            {/* <div className="absolute h-0.5 w-full z-0 bg-linear-to-r from-blue-500 to-purple-600" /> */}
+          </div>
+
+          <div className="grid px-12 grid-cols-1 md:grid-cols-3 gap-4 flex-1">
+            <TechnologiesCard
+              icon={<Music />}
+              name="Frontend"
+              description="Creating beautiful, responsive user interfaces"
+              items={frontend}
+            />
+
+            <TechnologiesCard
+              icon={<Server />}
+              name="Backend"
+              description="Building robust server-side applications"
+              items={backend}
+            />
+
+            <TechnologiesCard
+              icon={<Database />}
+              name="Database"
+              description="Deploying and scaling applications"
+              items={database}
+            />
+          </div>
         </div>
-        {/* <div className="absolute h-0.5 w-full z-0 bg-linear-to-r from-blue-500 to-purple-600" /> */}
       </div>
     </section>
   );

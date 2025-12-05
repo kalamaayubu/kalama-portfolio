@@ -1,13 +1,20 @@
 import React from "react";
 
-const Heading = ({ title }: { title: string }) => {
+type HeadingProps = {
+  title: string;
+  className?: string; // <-- FIXED
+};
+
+const Heading = ({ title, className = "" }: HeadingProps) => {
   return (
     <div
-      className="
-            border border-white/20
+      className={`
+          border border-white/20
+          bg-[#0c0c11]
             px-4 py-1 rounded-full font-medium
             text-white relative w-fit mx-auto
-          "
+            ${className}
+        `}
     >
       <span>{title}</span>
       <span
